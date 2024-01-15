@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message cache {
+  repeated cacheItem items = 1;
+}
+
+message cacheItem {
+  string path = 1;
+  string JSONvalue = 2;
+  optional int64 expiration = 3; // Unix timestamp, if not set, never expires
+}
