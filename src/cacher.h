@@ -7,4 +7,9 @@
 
 #endif //CACHER_H
 
+#include "json.hpp"
+
+
 const char* getHelloWorld();
+
+nlohmann::json getJson();
