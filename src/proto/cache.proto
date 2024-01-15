@@ -7,5 +7,12 @@ message cache {
 message cacheItem {
   string path = 1;
   string JSONvalue = 2;
-  optional int64 expiration = 3; // Unix timestamp, if not set, never expires
+  optional uint64 expiration = 3; // Unix timestamp, if not set, never expires
+}
+
+// Binary cache item
+message cacheItemBinary {
+  string path = 1;
+  bytes value = 2;
+  optional uint64 expiration = 3; // Unix timestamp, if not set, never expires
 }
