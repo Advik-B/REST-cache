@@ -6,5 +6,6 @@
 
 int main() {
     std::cout << getHelloWorld() << std::endl;
+    std::cout << getJson() << std::endl;
     return 0;
 }
