@@ -1,7 +1,13 @@
 syntax = "proto3";
 
+message timestamp {
+  uint64 value = 1;
+}
+
 message cache {
   repeated cacheItem items = 1;
+  timestamp lastUpdated = 2;
+  timestamp lastAccessed = 3;
 }
 
 message cacheItem {
